@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "../uploads")));
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => res.send("HELLO SELAMAT DATANG"));
 app.get("/api/v1", (req, res) =>
   res.send({ message: "Welcome to api point of sales!" })
 );
@@ -27,7 +27,7 @@ app.use("/api/v1/product", product);
 app.use("/api/v1/checkout", checkout);
 app.use("/api/v1/dashboard", dashboard);
 
-const port = 3000;
+const port = 8000;
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
